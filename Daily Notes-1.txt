@@ -1,0 +1,212 @@
+
+COREJAVA:
+==========
+
+
+Language:
+==========
+		communication with humans
+
+Programming Language:
+====================
+
+		communication with machines
+
+			POP 		 		OOP
+	BCPl,B,C,cobol..			c++,java,python,.net	
+
+
+				performance		inheritance,polymorphisam
+				Security		abstraction,encapsulation
+
+
+			OOPS,OOPL
+
+		JAVA 1995 17--->sun micro-->oracle--->james gosling
+		8 
+	
+		1)platform independent
+		2)garbage collection  -->garbage collector
+		
+		53 -->keywords--->small 
+		
+	Welcome.java
+	WORA
+		
+		
+		class Welcome{
+		
+		public static void main(String args[])
+		{
+		System.out.println("we are getting sleep....");
+		
+		
+		}
+		
+		}					javac filename.java				java classname
+							compiler			(JVM)
+		user lang---.java------------------------->.class-->machine lang
+							compilation				Execution
+							
+							
+		machine lang--->0's ,1's/byte/binary
+		
+		compiler
+		compailation---->
+		
+		run/execute--->
+		
+		translator-->
+		
+				java-->oracle				.net-->microsoft
+		
+Identifier:
+==========		
+		any name in java will call identifier it can be classname,methodname,varname,....
+		
+		
+		
+		
+		
+Variables:
+==========		
+		name given to the memory location
+		
+		
+			sandeep	9494348734
+		
+		datatype varname =value;
+		byte age;//0
+					marks=900;
+					
+				byte age=29; 1 byte
+				long contact=9494348734
+		PD
+		  8		bytes
+		byte	 1 byte		-128 to 127
+		short	 2			-32768 to 32767 
+		int		 4			
+		long     8
+		
+		float 	 4	5 decimal	3.8089089009868809f,78.93
+		double   8  15decimal
+		
+		boolean  1 bit	true,false -1,0
+		char	 2 bytes  c 'M','F'  
+					ASCII a-97,A-65....english
+		
+						java 18 International lang
+		
+		
+		types of variables
+		
+			local
+				if we declare the variable with in the method/block localvar
+			global--->instance & static 
+				if we declare the variable outside the method/block and with in the class
+			
+	Instance & Static :
+========================
+
+	syntax:
+	=======
+			static int salary=90000;//4 bytes
+				int marks=20000;
+	
+	memory:
+	=======
+			static variable will get memory space at the time class loading into JVM and only once
+			instance variable will get memory space for every object creation 
+			.java -------->.class--->JVM(java classname)
+			class,object
+				class is combination datamembers+member functions
+			
+				object is an instance(memory)of class
+				
+				classname objname=new classname();
+	Access:
+	=======
+			static variable can be accessed by using classname
+			instance variable can be accessed by using objectname
+	When/Where:
+	===========
+			
+			for common data we can go for static
+			for unique data we can go for instance
+			
+			
+	FLow Control:
+===================	
+			
+			
+			eclipse
+	
+			
+Method:
+========
+			
+			accessmodifier returntype methodname(parmas list)-->signature
+			{
+			//method body/implementation
+			}
+			
+			
+			class CalculatorExample{
+			
+			int empSalary=12000;
+			
+			int addOfTwo(int a,int b)
+			{
+			return a+b;
+			}
+			
+		static	void subOfTwo(int a,int b)
+			{
+			System.out.println("sub of two numbers :"+(a-b));
+			}
+			void mulOfTwo()
+			{
+			int a=20;
+			int b=30
+			System.out.println("sub of two numbers :"+(a*b));
+			}
+			
+			int divOfTwo()
+			{
+			return a/b;
+			}
+				
+			}
+			
+			
+			IDE--->eclipse
+			
+			
+			JAVA
+			
+	JSE       JEE        JME		
+	
+	
+1)Standalone/dekstop applications	JSE:corejava,awt,swings,applets notepadd++,eclipse,antivirus
+	
+	
+2)web applications    URL	       JEE:servlets,jsp,mvc,ejb,........gmail,facebook
+	
+	
+3)distributed applications		JEE:web services,restful.....phonepe,paytm,gpay
+	
+	
+4)mobile applications			JME:Android	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
