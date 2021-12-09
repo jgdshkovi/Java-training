@@ -5,3 +5,14 @@ https://java.meritcampus.com/core-java-questions/Array-Output762
 https://mathbits.com/MathBits/Java/arrays/MCArrays.htm
 https://www.javaguides.net/2021/10/java-arrays-quiz-multiple-choice.html
 http://www.maamu.itgo.com/other/javaquiz1.htm
+https://docs.oracle.com/javase/8/docs/api/
+
+Q)write a program to check if a number is a single digit number or not using Lambda expression?
+
+Q)write a program to supply 4 digit random OTPs using Lambda expression
+
+Q)Write a program to print names which are ending "esh" from"suresh","mahesh","sandeep","ramakrishna","somesh","rajesh".
+
+	using Lambda expression
+
+
