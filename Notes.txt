@@ -1,0 +1,1291 @@
+Core Java
+==========
+
+
+
+language:
+=========
+
+
+Programming Language:
+=====================
+
+
+		pop							oop
+	B,BCPl,C,CObol.....			c++,java,python,.net...
+		
+
+		1)performance					1)performance		inheritance,polymorphisam
+		
+		2)security						2)security			abstraction,encapsulation
+		
+		
+
+
+
+		oops/oopl
+
+			python 1993	3	java16 8	james gosling sun micro system		1995 1.0  june 24  26th 
+
+Oracle
+
+	1)platoform independent
+	
+	2)garbage collection   WORA   garbage collector  
+	
+				oracle						micorsoft 
+				.java							.net
+				.class windows 
+				
+				compilation
+				compiler
+				execution
+				jvm
+				byte code ,source code 
+				......
+
+
+		.java			user understandable language /source code 
+
+compiler-->compilation			javac filename.java
+									java classname
+		.class-->jvm				JDK--->JRE--->JVM--->0's 1's ,byte code 
+
+
+
+
+print welcome msg  setup
+
+53 keywords   small case
+
+
+
+
+variables:
+==========
+		name of storage location
+		
+
+var name--->sandeep	9494348734-->value
+
+			
+				syntax:  datatype varname=value;
+		
+
+		8 pd 		byte  age=27;//1 byte		9494348734
+
+		byte		1 byte=8bits  -128 to 127
+		short       2       -32768 to 32767
+		int			4		-2147875368
+		long		8		
+	
+		float		4 bytes			123.0809890890888908		float result=89.789f;
+		double		8 bytes	        123.0809890890888908		double result=89.789;
+		
+		boolean		1 bit				true(1),false(0)				boolean value=true/false;
+		char		2 bytes				'F'
+
+
+			C--->ASCII	-->english		a-97  A-65
+
+
+			java--->unicode---18 international
+
+
+
+local
+
+global-->instance ,static
+
+instance ,static
+=================
+
+Syntax:
+		static 
+	static int marks =1234;//4 
+		instance
+	float salary=123.4f;//	
+Memory:
+		Insatnce varibale/method will get  memory for every object creation
+	
+		static  varibale will get  memory space only once at the time class loading into JVM		
+		
+				java Test  jvm 
+				
+				class ,object 
+				A
+				A obj=new A();	 heap area ,method/class area
+				
+Access:
+				static properties can be accessed by using classname 
+
+				instance properties can be accessed by using objname 
+
+When:
+
+		for common properties we can go for static like school name ,college name,org name 
+		
+		for unique properties we can go for instance like empid,contactnum,aadhar ,pan ...
+
+
+methods							void,int,float,Employee
+
+				accessmodifier static/instance returntype methodname(dt param1,dt param2... )//signature
+				{
+				//method body
+				
+				
+				}
+				
+				
+class Calculator{
+
+int  add(int a ,int b)//non-static
+{
+return a+b;
+}
+void  sub(int a ,int b)
+{
+System.out.println(a-b);
+}
+static void  mul()
+{
+int a=12;
+int b=23;
+System.out.println(a*b);
+}
+
+public static void main(String args[])
+{
+Calculator calc=new Calculator();
+		int result=	calc.add(12,13)
+	System.out.println("addition of 12,13"+result);
+					calc.sub(14,12);
+				Calculator.mul();
+}
+}				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+package
+
+
+
+run time data 
+
+
+eclipse 
+
+
+			java
+				
+	JSE 						JEE        JME
+corejava,awt,swings,applets					Android
+
+
+1)desktop/standalone	 notepad++,eclipse,java,....
+
+2)web application	  server ,www.facebook.com	---servlets,jsp,spring....
+
+3)distributed 			
+
+4)mobile application
+
+flow control
+
+
+OOPS:
+======
+
+OOPL-->JAVA
+
+
+1)performance		inheritance,polymorphisam
+2)security			abstraction,encapsulation
+		
+
+
+inheritance:
+============		"CODE Reusability"
+extends,implements
+		
+class Hello{
+
+//20000 methods
+
+}
+
+class Welcome extends Hello{
+
+
+//15 methods
+
+
+
+}
+
+class         --->only concrete methods
+abstractclass --->abstract+concrete
+interface     --->only abstract methods	(public abstract)
+
+methods-->abstract, concrete/non-abstract 
+
+
+abstraction:abstract class(0-100)/interface 100%
+
+abstract method
+
+
+signature+body
+
+
+	public abstract void display();
+
+
+public  void add(){
+
+
+}
+
+interface A{            interface B{
+
+void m1();				void m1();
+
+
+}							}
+
+class C implements A,B
+{
+
+
+C c =new C();
+c.m1();
+m1()
+{
+
+}
+}
+polymorphisam:
+=============
+many forms 
+
+method overloading
+method overiding
+	public,private ,protected,default,this,super,final,encapsulation,constructor
+	
+						no of params,order of params ,type params
+	
+	method name is same signature is different 
+	
+package com.fis.oops;
+
+public class MethodOverloadingEx {
+	public void add(float a, float b) {
+		System.out.println("addition of two float " + (a + b));
+	}
+	public void add(int a, int b) {
+		System.out.println("addition of two integers " + (a + b));
+	}
+
+	public void add(int a, int b, int c) {
+		System.out.println("addition of three integers " + (a + b + c));
+	}
+
+	public void add(int a, float b) {
+		System.out.println("addition of int,float " + (a + b));
+	}
+
+	public void add(float a, int b) {
+		System.out.println("addition of float ,int" + (a + b));
+	}
+
+	public static void main(String[] args) {
+		MethodOverloadingEx obj=new MethodOverloadingEx();
+		obj.add(123, 124,456);
+		obj.add(123, 124);
+		obj.add(123.5f, 124);
+		obj.add(123, 12.12f);
+		obj.add(123.23f, 1.24f);
+	}
+}
+	
+	type promotion
+	
+	package com.fis.oops;
+
+public class MethodOverloadingEx {
+	public void add(float a, float b) {
+		System.out.println("addition of two float " + (a + b));
+	}
+	
+	public void add(int a, float b) {
+		System.out.println("addition of two long " + (a + b));
+	}
+	
+
+	public static void main(String[] args) {
+		MethodOverloadingEx obj=new MethodOverloadingEx();
+				obj.add(123.5f, 12.34f);
+				obj.add(12, 34);
+				obj.add('a', 'b');//type promotion
+	}
+}
+	
+
+
+method overiding:
+=================
+
+	public class Parent
+			{
+			
+			 public void properties{
+			 
+			 sop("100 crores")
+			 }
+			
+			 public void marriage{
+			 
+			 sop("xyz")
+			 }
+			
+			
+			
+			}
+		class Atul extends Parent 
+		{
+		
+			 public void marriage{
+			 
+			 sop("alia")
+			 }
+		
+		
+		
+		}
+
+
+FIle IO:
+=========
+java.io
+
+			File
+		
+	write 
+		
+			FileWriter
+			BufferedWriter
+			PrintWriter
+			
+	Read
+	
+			FileReader
+			BufferedReader
+
+
+ObjectInputStream,ObjectOutPutStream
+
+
+
+Collections:
+===============
+
+
+		int age=27;
+		
+		int ages[]=new int[30];
+		
+		ages[1]="sadasd";
+		
+		1)arrays are fixed in size /not growable in nature 
+		
+		2)homohgeneous data
+		
+		3)utility method were not there 
+		
+		
+		
+		collections extension to arrays
+		
+		
+		
+		1)collections are not fixed in size / growable in nature Ex: Arraylist al=new ArrayList();->10,16,25
+		
+		2)homohgeneous & haterogeneous data
+		
+		3)lots of predefined methods
+		
+		
+		
+		Collection Framework
+		====================
+		
+		
+		
+		
+import java.util.ArrayList;
+//1)collections are not fixed in size / growable in nature Ex: Arraylist al=new ArrayList();->10,16,25
+
+//2)homogeneous & haterogeneous data
+
+//3)lots of predefined methods
+
+//1)duplicates are allowed
+//2)insertion order is preserved 
+
+public class ListEx {
+	public static void main(String[] args) {
+
+		// java.util
+
+		ArrayList<String> al = new ArrayList<String>();// 10,16 (cc*3/2)+1
+		al.add("suresh");
+		al.add("ramesh");
+		al.add("naresh");
+		al.add("ramesh");
+		al.add("sandeep");
+		al.add("somesh");
+		al.add("rajesh");
+
+		ArrayList<String> al1 = new ArrayList<String>();
+
+		al1.add("mahesh");
+		al1.add("mike");
+
+		al1.remove(1);
+		System.out.println(al1);
+		al1.addAll(al);
+		System.out.println(al1);
+		al1.retainAll(al);
+		System.out.println(al1.contains("mahesh"));
+		
+	}
+}
+		
+		
+		
+		
+		Comaprable & Comparator
+ 		
+				Interface,Functional interface,marker interface 
+		
+		abstract-				SAM					0
+		
+		
+		java.lang.compareTo
+		Comaprable-->compareTo()--nso
+		java.util
+		Comparator--->compare ()-->cso
+		
+		
+		
+		psvm{
+sop("A".compareTo("Z"));// -ve
+sop("Z".compareTo("K"));//  +ve
+sop("A".compareTo("A"));//   0
+sop("A".compareTo(null));--RE - nullpointer exception
+}
+compareTo 
+--return -ve if obj1 has to come before obj2
+--return +ve if obj1 has to come after obj2
+-- return 0 if obj1 & obj2 are equal.
+		
+
+
+
+FIle handling
+
+
+data
+
+Database :oracle,mysql,postgres ,db2...
+
+
+		 mongodb,redis,cassendra....
+
+
+		oracle 18.x
+		
+	DBMS	
+		
+	RDBMS	--SQL
+
+	
+		DDL-->create,alter,drop,truncate,rename -->auto commited
+		DML-->insert,update,delete				not auto commited
+		DRL-->select
+		DCL-->grant,revoke
+		TCL-->commit,rollback,savepoint
+
+
+Creating User:
+
+		1)conn /as sysdba;
+		
+		2)create user fisglobal identified by fisglobal123;
+		
+		3)grant connect,resource to fisglobal;
+		
+		
+		conn fisglobal/fisglobal123
+
+		create table employees(empid number(10),ename varchar2(10),esal number(10))
+		
+			
+		create emp;
+		
+		insert 100;
+		
+		update 10;
+		
+		delete 5;
+	
+		create dept;commit
+		insert 30;
+		update 5
+		
+		close 
+		
+		select dept ->0
+		select emp  ->95
+
+
+
+		create emp;commit
+		savepoint s1;
+		insert 10000;
+		savepoint s2;
+		update 10;
+		savepoint s3;
+		delete 5;
+	
+			rollback to s3;
+
+
+JDBC:java database connectivity
+
+
+			drivers
+		java<------->database
+
+
+JDBC--api
+
+			java---->database
+
+
+1)jdbc-odbc driver
+
+2)native api driver
+
+3)network protocol driver
+
+4)thin driver /pure java driver 
+
+
+
+5 steps
+
+
+//1)load the driver class			
+
+//2)create the connection
+
+//3)create the statement
+
+//4)execute query
+
+//5)close the connection
+
+
+jar-->ojdbc.jar 
+
+
+Spring:
+======
+		Framework
+		
+		spring is non-invasive,light weight,loosly coupled framework
+		
+		
+		
+		
+		non-invasive,invasive  light weight /heavy weight, loosly coupled & tightly coupled 
+		
+		
+			invasive :will force to the programmer to implement predefined api,struts
+			
+			non -invasive:it will never force to the programmer  	,spring ,hibernate 
+		
+		
+		
+		Servlet:
+				web applications
+				
+			1)implements Servlet
+			
+			2)extends  GenericServlet
+			
+			3)extends HttpServlet 11
+			
+			
+		class Login extends HttpServlet
+		{
+		//11
+		
+		}		
+			
+			100*11=1100
+			
+			
+			EJB-->Heavy component   rod johnson   interface21 -spring 
+			
+		
+		
+		
+		tightly coupled
+		
+		
+		class A{
+		
+		A()
+		{
+		}
+		public void m1()
+		{
+		
+		}
+		}
+				BeanFactory
+		}
+		class Test
+		{
+		
+		main()
+		{
+		A a=getBean("A")
+		a.m1()
+		
+		}
+			
+		}
+		
+	Dependency injection	
+		
+		
+		IOC
+		container -->BeanFactory,ApplicationContext
+
+		1)instantiation of bean
+		
+		2)wiring the beans together 
+		
+		3)configuring beans 
+		
+		4)destroying 
+
+
+
+	jars spring 5.x
+
+
+
+	20+
+@Autowired 
+		JdbcTemplate -->
+
+			update-->dml,queryforList-->fetching all records
+			
+			
+jdbc-->create the table ,
+
+JPA-->specification
+
+Hibernate :ORM tool -->eclipse link,top link,ibatis....
+				emp crud
+
+		
+				no table creation
+
+				no querys
+				
+				no checked expections
+				
+				with cache 
+
+
+
+java ->@Entity
+class Employee
+{
+private int empId;
+private String empName;
+.....
+//setter & getters
+}
+
+jars
+
+client 
+
+	main()
+	{
+	
+	
+	
+	}
+
+configuration (hibernate.cfg.xml)
+
+database properties
+
+
+hibernate properties
+
+
+mapping resource 
+
+
+
+NOTE:spring has given annotations for user defined classes like(@service,@Repository,@Component)but not for predefined classes .
+
+
+
+@Bean,@Configuration	beans,bean class id
+java config 			xml config					 annotation config
+
+
+
+
+SPRING MVC:	DispatcherServlet
+===========
+
+MVC 
+
+@Controller
+
+@RequestMapping   URL
+
+			dispatcherservlet  ----> controller --->modelandview
+
+
+
+
+		simple login 
+
+
+		<form action="">
+		
+		
+		<input type="text" name="uname">
+		<input type="password" name="pass">
+		
+		<form>
+
+
+		server 
+				apache tomcat 
+				
+				websphere 
+				
+				
+	AOP:Aspect Oriented Programming
+
+
+				concern
+				
+				
+				
+				class A{
+				
+				
+				//100 methods
+				
+				
+				
+				
+				20
+				
+				
+				}
+				
+		
+		AOP
+		
+		concern
+		
+		Join point --> method execution
+		
+		advice	   -->an action taken by an aspect  at a particular join point	
+					
+						BeforeAdvice:executes before a join point
+						
+						AfterAdvice:after advice wether a join point exits 
+						
+						AroundAdvice:Before+after advice
+						
+						After Returning Advice:after completing join point normally
+					
+						After Throwing Advice:it executes if method exits by throwing an exception
+		
+		
+		aspect		its a class which containse advices and join points
+		
+		
+		interceptor its a aspect that containse only once advice 
+		
+		pointcut expression
+		
+		
+
+		AspectJ
+	
+	
+			@Aspect  declares the class as aspect
+			
+			
+			@PointCut declares the pointcut expression
+			
+			@Before,@After,@Around,@AfterReturning,@AfterThrowing
+				
+				
+				@PointCut:
+				============
+				
+				@PointCut("execution(*Operation.*(..))")
+				
+				private void helloMsg()
+				{
+				//login
+				}
+				
+				
+				@PointCut("execution(int A**(..))")
+				
+				
+Webservices:SOA
+===========					
+				we can share information between applications
+				
+				sbi card ---> icici atm machine  -->sbi server 
+						1234
+				
+				
+				5000
+				
+				POSTMAN
+				
+		Spring boot		rest
+				
+				
+				
+INTRODUCTION:
+==============
+**IF WE WANT SHARE THE INFORMATION BETWEEN TWO INTEROPERABLE APPLICATIONS.
+
+
+WHAT IS THE NEED OF SHARING OF INFORATION BETWEEN TWO APPLCATIONS.
+
+EX:USING SBI ATM CARD IN OTHER BANK ATM MACHINE. 
+
+
+WHAT ARE TECHNOLOGIES WE HAVE BEFORE WEBSERVICES AND DISADVANTAGES WITH THOSE TECHNOLOGIES:
+===========================================================================================
+
+-->SOCKET PROGRAMMING    soap--->XML   restfull-->xml,json,html,txt,......
+-->RMI
+-->EJB  
+-->DCOM
+-->RPC
+-->CORBA
+
+USING THESE TECHNOLOGIES ALSO WE CAN SHARE THE INFORMATION BETWEEN TWO APPLCATIONS.
+
+SOCKET PROGRAMMING(NET WORKING(CORE JAVA CONCEPT)):
+------------------
+**USING THIS WE CAN MAKE COMMUNICATION IF BOTH THE APPLCATIONS ARE JAVA APPLCATIONS(DEPENDECY).
+
+--->SP,RMI,EJB THESE THREE TECHNOLOGIES ARE GIVEN BY SUN MICROSOFT SYSTEMS USING THESE WE CAN MAKE COMMUNICATION IF BOTH THE APPLCATIONS ARE JAVA APPLCATIONS.
+
+EJB:
+-----
+**WE HAVE ENTITY BEANS(LIKE JDBC,HIBERNATE),SESSION BEANS(WE CAN SHARE THE INFORMATION BETWEEN TWO APPLCATIONS).
+
+DCOM(DISTRIBUTED COMMUNICATIONS):
+---------------------------------
+**GIVEN BY MICROSOFT(USING THIS WE CAN MAKE COMMUNICATION IF BOTH THE APPLCATIONS ARE .NET APPLCATIONS)
+
+RPC(REMOTE PROCEDURE CALLS):
+----
+***GIVEN BY OBJECT MANAGEMENT GROUP(USING THIS WE CAN MAKE COMMUNICATION IF BOTH THE APPLCATIONS ARE C/C++ APPLCATIONS).
+
+CORBA:(COMMON OBJECT REQUEST BROKER ARCHITECTURE)
+-----
+***GIVEN BY OBJECT MANAGEMENT GROUP(THIS IS THE FIRST TECHNOLOGIE TO MAKE COMMUNICATION BETWEEN TWO INTEROPERABLE APPLCATIONS)
+
+**CORBA IS SPECIFICATION(SERVLET IS SPECIFICATION IMPLEMENTATIONS TOMCAT,WEBLOGIC,JBOSS),LOT OF VENDORS HAS GIEVN IMPLEMENTATIONS LIKE SUN,MICROSOFT,C++ .
+ 
+ BECAUSE OF NOT GIVING PROPER IMPLEMENTATIONS THE COMMUNICATION WAS NOT HAPPENED(IN SOME CASES)
+
+ WEBSERVICES IS SPECIFIACTION(SET OF RULES AND GUIDELINES I.E WEBSERVICE ARCHITECTURE).
+ 
+webservice--->soap--->xml,restful--->json,xml,pdf,txt,html....   
+				
+				
+				
+Spring rest:
+============
+
+spring boot rest 
+
+					jax-b	xml-->SOAP,RESTFUL
+					
+			app1 						app2
+
+
+						JSON--jackson api
+
+
+				{
+				"id":123,
+				"name":"suresh"
+				
+				}
+				
+				
+				server
+				
+				dependencies
+				
+				configuration
+				
+				
+	spring boot 			
+	-----------			
+			
+			1)Auto configuration  :most of the commnly used classes already configured 
+			
+			2)embeded server      tomcat,putty
+			
+			3)starters  			pom.xml  starter parent (manage dependencies)
+			
+			4)Actuators			insite ,health ,beans 
+			
+			
+					spring core ,context
+			
+			
+			
+
+					emp crud 
+					
+					trainee crud 
+				
+				
+				STS
+				postman/swagger
+				
+				
+				
+			Spring rest data jpa	
+				
+				
+		spring mvc		
+				
+				
+			emp crud 	
+				
+				@Controller
+				
+				@RestController
+				
+				
+				@RequestMapping
+				spring 4.x
+				post--->@PostMapping,@GetMapping,@DeleteMapping,@PutMapping
+				
+						@Repository				@Service/@Transactional					@RestController
+				
+						DAO class	<=====	  Serviceclass       <=====         controllerclass<===postman
+				
+	createQuery,persist,merge,find,remove													@Autowired			
+																				
+				
+				
+				SpringBootJpa
+				
+				spring boot DATA JPA--->Repository
+				
+				
+							CrudRepository -->crud operations 
+									|
+							JpaRepository    save
+				
+			log4j jar 
+
+
+			Core Objects:
+			=============
+				Logger log=	Logger.getLogger(Test.class.getName());
+			
+								
+						debug
+						info
+						warn()
+						error()
+						fatal()
+			
+				debug<info<warn<error<fatal
+
+	Logger
+	Appender			FileAppender,ConsoleAppender,JdbcAppender
+	LayOut					HtmlLayout,XmlLayout,simplelayout...
+					
+
+		
+Spring Boot 
+===========
+			Monolithic 
+		
+		Microservices:
+		=================
+decompose larger project into smaller services  later communicate the services 
+
+FAT JAR--->source code 
+			dependencys
+			server
+			database			indepdently deployable 
+		
+
+		
+Communication:
+--------------
+
+			
+								
+			Synchronous 	RestTemplate
+			
+			
+			Async			Messaging protocols  rabbitmq,kafka,....
+
+
+
+				m1       rabbitmq   m2
+
+
+
+			SOA 
+			
+			
+			microservices 
+				
+				
+				
+		Websites:			
+				is a collection webpages 
+				
+				
+				webpages:	static 		facebook login 
+	
+							dynamic		facebook
+						
+				
+				HTML,CSS,JAVSCRIPT,TYPESCRIPT,ANGULAR,REACT,........
+				
+				
+				
+				html-->STATIC WEB PAGES 
+				welcome.html
+				
+				<html>
+					<head>
+					<title>
+					<!--include external css,js  -->
+					</head>
+					<body>
+					<h1>welcome to html</h1>
+					</body>
+				
+				</html>
+				
+		CSS:
+=============
+		3 ways 
+		
+				1)inline
+				
+				2)internal
+								<style>
+								selector{proname:value;propname:value...}
+								
+								
+								</style>
+				3)external 
+
+
+			selector
+			
+				1)element selector
+				
+				2)group selector
+				
+				3)all selector
+				
+				4)class selector
+				
+				5)id selector
+
+
+
+
+		mystyles.css
+				
+					#sleeping{
+					color:blue;background-color:red;		
+					
+				
+				
+				
+				
+				
+				<link rel="stylesheet" href="mystyles.css"/>bootstrap.css
+				
+				
+				
+				Angular==>html+css+ts+bootstrap
+				
+		
+Javascript:	dynamic typing	
+				
+					datatype varname=value;//static typing
+					
+					
+					var name="sandeep";
+				
+				
+					function addition()
+						{
+						
+						}					.css	
+				<link rel="stylesheet" href=""/>
+				
+				<script>
+		
+
+				</script>
+				
+						hello.js
+				
+					
+					
+					
+					one.html
+					<html>
+					<head>
+					<script src="hello.js" />
+					</head>
+					<body>
+					
+					</body>
+					</html>
+				
+		Typescript:		
+				
+						var name="fisglobal";//string
+				
+					name=9494348734;
+					name=true;
+				
+				
+				function add(a,b)
+				{
+				document.write(a+b);
+				}
+				
+				add(1,20);
+				add("1","20");
+				add(true,false);
+				
+		Angular	js
+		angular 2 ts
+
+CLI--->ng new projectname 		component -->class  -->app
+
+	ng serve -o  html+css+ts+spec.ts
+
+SPA,MPA
+
+
+MVC
+
+
+component -->app
+
+			
+	selector
+	
+	
+	@Component 
+	{
+	selector:"",
+	templateURL:''
+	styleurl:''
+	
+	
+	}
+export class AppComponent
+
+
+
+pipe   | pipe name 
+data binding -->one way data binding -->model --> view
+
+				two way data binding 
+				
+				event binding -->onclick ,onsubmit-->(click),(ngsubmit)
+
+routing -->router-outlet ,routerLink
+
+
+			dependency injection 
+			
+			httpclient: angular   post,put,get,delete<----->http://localhost:1234/add/account
+			
+			Forms
+			
+		
+		Rxjs	Obseravable:many objects
+			
+				Promise :one object 
+			
+			Integration 
+
+
+
+Angular Forms:
+==============
+
+		template driven forms
+		
+		reactive forms 
+
+
+
+		registration page  submit -->alert display 
+		
+		login page 			submit-->username fisglobal & fisglobal123
+		
+		employee 
+		
+				
+				
