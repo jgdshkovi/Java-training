@@ -1,0 +1,52 @@
+step 1) install maven
+
+step 2) set the path for maven up to bin
+
+
+step 3) open cmd type below command(here you need to give your oracle jar path).
+	
+mvn install:install-file -Dfile=C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar
+
+
+
+
+
+
+
+
+
+
+package com.ktg;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+//@Configuration// @Component
+//@ComponentScan(basePackages = { "com.ktg" })
+public class AppConfig {
+//	@Bean //user defined spring @Component  <bean>
+//	public Address getAddress() {
+//		Address address = new Address(123, "hyderabad");
+//		address.setHno(11);
+//		address.setCity("hyd");
+//		return address;
+//	}
+//	@Bean(name ="emp")
+//	public Employee getEmp() {
+//		Employee employee = new Employee();
+//		employee.setEid(123);
+//		employee.setEname("suresh");
+//		employee.setAdd(getAddress());
+//		employee.setTadd(getTAddress());
+//		return employee;
+//	}
+//	@Bean
+//	public TAddress getTAddress() {
+//		TAddress address = new TAddress();
+//		address.setHno(11);
+//		address.setColony("abccolony");
+//		address.setVillage("xyz");
+//		return address;
+//	}
+}
