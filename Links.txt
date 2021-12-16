@@ -15,4 +15,8 @@ Q)Write a program to print names which are ending "esh" from"suresh","mahesh","s
 
 	using Lambda expression
 
+https://event.on24.com/wcc/r/3379417/28F40C36397F5941A375E112C133AEB9
+
+
+
 
