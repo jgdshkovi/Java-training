@@ -103,10 +103,623 @@ Variables:
 			local
 				if we declare the variable with in the method/block localvar
 			global--->instance & static 
-				if we declare the variable outside the method/block with in the class
+				if we declare the variable outside the method/block and with in the class
 			
+	Instance & Static :
+========================
+
+	syntax:
+	=======
+			static int salary=90000;//4 bytes
+				int marks=20000;
+	
+	memory:
+	=======
+			static variable will get memory space at the time class loading into JVM and only once
+			instance variable will get memory space for every object creation 
+			.java -------->.class--->JVM(java classname)
+			class,object
+				class is combination datamembers+member functions
+			
+				object is an instance(memory)of class
 				
+				classname objname=new classname();
+	Access:
+	=======
+			static variable can be accessed by using classname
+			instance variable can be accessed by using objectname
+	When/Where:
+	===========
+			
+			for common data we can go for static
+			for unique data we can go for instance
 			
 			
+	FLow Control:
+===================	
+			
+			
+			eclipse
+	
+			
+Method:
+========
+			
+			accessmodifier returntype methodname(parmas list)-->signature
+			{
+			//method body/implementation
+			}
+			
+			
+			class CalculatorExample{
+			
+			int empSalary=12000;
+			
+			int addOfTwo(int a,int b)
+			{
+			return a+b;
+			}
+			
+		static	void subOfTwo(int a,int b)
+			{
+			System.out.println("sub of two numbers :"+(a-b));
+			}
+			void mulOfTwo()
+			{
+			int a=20;
+			int b=30
+			System.out.println("sub of two numbers :"+(a*b));
+			}
+			
+			int divOfTwo()
+			{
+			return a/b;
+			}
+				
+			}
+			
+			
+			IDE--->eclipse
+			
+			
+			JAVA
+			
+	JSE       JEE        JME		
+	
+	
+1)Standalone/dekstop applications	JSE:corejava,awt,swings,applets notepadd++,eclipse,antivirus
+	
+	
+2)web applications    URL	       JEE:servlets,jsp,mvc,ejb,........gmail,facebook
+	
+	
+3)distributed applications		JEE:web services,restful.....phonepe,paytm,gpay
+	
+	
+4)mobile applications			JME:Android	
+	
+	
+	
+	
+	
+	
+10+11+new+class+void+static+import+package		
+	
+	
+
+
+OOPS:
+=======
+
+		performance  ->inheritance+polymorphisam
 		
+		security     ->abstraction+encapsulation
+		
+		
+		inheritance:
+		============CODE REUSABILITY   --->extends/implements
+		class Calc
+		{
+		//10 variables
+		//30 mehtods
+		
+		}
+
+		class Test	extends Calc				class A extends Calc
+		{								{
+			
+		//100 methods					//70 methods
+		
+		
+		}								}
+
+	abstraction,polymorphisam,this,super,constructor,final,public,private,protected,default,encapsulation,String,StringBuffer,StringBuilder
+	abstract methods,concrete methods,abstract class,interface
+	
+	Multiple Inheritance:
+	====================
+	
+	
+	class.abstract class,interface
+	class:combination of data members,memeber functions(methods)
+	======
+	
+	class is a combination only concrete methods.
+				methods
+	
+		accessmodifier returntype methodname(parmas list)-->signature
+			{
+			//method body/implementation
+			}
+			//concrete method
+	
+	
+			abstract --->Abstraction--->abstract class,interface
+	
+	
+	
+	
+	Class:
+	========
+	class is a combination only concrete methods.
+				methods
+	
+	Abstract Class:
+	==============
+	abstract class is a combination  concrete+abstract methods.
+				
+	
+		interface:
+		==========
+	abstract class is a combination  of only abstract methods.
+	
+	
+	
+	Multiple Inheritance:
+	====================
+	many parents and one child
+	
+	 * java doesn't support multiple inheritance @ class level
+	 * java  supports multiple inheritance @ interface level
+	 
+	 
+	 
+	 class A	             class B
+	 {								{
+	 
+	 //10						//20
+	 m1(){}						m1(){}
+	 m2(){}						m4(){}
+	 
+	 }								}					
+	 
+	 
+	 
+				class C extends A,B
+				{
+				
+				
+				C c=new C();
+				c.m1()
+				
+				}
+	 
+	 
+	 constructor:
+	 ============
+	 
+				to intialize the object
+				
+				classname objname=new classname();
+				
+				classname objname=new constructor();
+	 
+				A a=new A();
+	 
+	 
+	Polymorphisam:
+	=============
+	
+	
+			method overloading,method overriding
+	
+		
+method overloading:
+=================
+		method name is same signature is different
+							
+								1.no of params
+								2.order of params
+								3.type of params
+	class Calculator
+	{
+	
+	
+		public void add(int a,int b,int c)
+		{
+		System.out.println("add of three int's : "+(a+b+c));
+		}
+		public void add(int a,int b)
+		{
+		System.out.println("add of two int's : "+(a+b));
+		}
+		public void add(float a,float b)
+		{
+		System.out.println("add of two float's : "+(a+b));
+		}
+		public void add(int a,float b)
+		{
+		System.out.println("add of  int,float : "+(a+b));
+		}
+			public void add(float a,int b)
+		{
+		System.out.println("add of float ,int : "+(a+b));
+		}
+	}
+
+
+
+method overriding:
+=================
+		method name is same implementation is different
+
+
+
+
+this,super
+==========
+
+this is used current class properties(variable,method,constructor,object)
+
+
+
+
+String,StringBuffer,StringBuilder:java.lang
+===================================
+group chars  SCP heap
+
+		String name="";//literal
+		
+		String name1=new String("");
+		
+
+
+File I/O:
+========
+java.io
+
+
+	File file=new File("fisglobal.txt");
+	
+			file.createNewFile();//throws IOException
+
+FileWriter,BufferedWriter,PrintWriter
+
+
+FileReader,BufferedReader
+
+
+
+Collections:
+============
+		variable 
+
+		int marks =90;
+		
+		int marks[]={1,2,3,4,6,7,8,9,9,};
+		
+		int ages[]=new int[10];//9 AIOE
+
+
+		
+			1)fixed in size/not growable in nature
+			2)only homogeneous data allowed
+			3)no utility methods
+			
+			
+
+Collections advantages:
+
+			1)not fixed in size/ growable in nature				ArrayList->10,16,25
+			2) homogeneous & heterogeneous data allowed
+			3) utility methods
+
+
+
+
+
+Spring :
+=======
+		tightly coupled/loosly coupled
+
+		light weight /heavy weight
+		
+		invasive /non-invasive
+
+
+
+	light weight /heavy weight
+
+
+		Servlets-->web applications
+	
+			implements Servlet
+			extends GenericServlet
+			extends HttpServlet 11
+			
+		class Login extends HttpServlet 
+		{
+		
+		Heavy component
+		
+		}
+		EJB--->rod johnson -->interface21
+		
+		2003 spring --->light weight applications
+		
+			
+			non-invasive:spring,hibernate
+			
+			invasive --->struts
+		
+		Loosly coupled 
+		
+		
+		class A{
+		m1(){
+		
+		
+		}
+		}
+		//tightly coupled
+		class B{
+		m2(){
+		A a =new A();
+		a.m1()
+		}
+		}
+		
+		avoid dependency-->spring core 
+		
+		loosly coupled
+		
+		
+		20+
+		
+		springcore 
+		============
+		
+				SETTER INJECTION	-->setter --><property>
+				CONSTRUCTOR INJECTION--->constructor--><constructor-arg>
+				AUTOWIRING
+		
+		
+		CONTAINER 				A,B,C
+				BeanFactory
+				ApplicationContext
+		
+		jar files   ojdbc.jar
+		
+		Employee
+		{
+		
+		
+		
+		}
+		
+		Test 
+		{
+		BeanFactory
+		
+		}
+		
+		.xml
+		<beans>
+			<bean>
+		
+		
+		</beans>
+		
+	Spring Core ,setter,constructor,xml config,annotation config,javaconfig	
+		
+				containers--->BeanFactory,ApplicationContext
+				
+				
+	Spring Jdbc		-->5 steps-->Boiler plate code	
+				
+		oracle,mysql,db2
+				
+		JDBC  --->  Hibernate-->ORM(eclipse link,top link,hibernate....)-->Object realtional mapping
+		
+		
+		JPA-->java persistance api-->SPecification
+		
+
+		hibernate 5.x
+		
+		
+		JDBC-->oracle,db2,mysql.......
+				
+				throws 
+		
+		spring JDBC
+		
+		
+		hibernate-->ORM 
+		
+		
+		database ---->Objects
+		
+		
+		non invasive -jars 5.x
+		
+		
+		CRUD
+		
+		HIbernate			ojdbc,hibernate,spring ,jre
+		
+		maven	jar			hibernate core,spring core,mysql.....POM.xml <project>,<depdencies>
+		
+		Repository
+		
+		
+		local repo m2  --->central repo
+			
+			
+					remote repo
+		
+		
+		
+		
+		
+		
+		spring hibernate		
+		
+		spring mvc :web    server 
+			
+			MVC:@RequestMapping,@Controller
+		
+		get,put,post,delete
+		
+		junit
+		
+		log4j
+		
+	
+		
+		Spring :
+		========@Component,@configuration,@ComponentScan,@Autowired,@Service,@Repository
+				@Qualifier,@Scope,@Entity,@Id,@Column,@GeneratedValue,@Transactional
+				@Bean,@Value,@RequestMapping,@Controller,@GetMapping,@PutMapping,@PostMapping
+				@DeleteMapping ,	@SpringBootApplication 
+				configuration
+						xml		<beans><bean><property><constructor-arg>ref,autowire,scope
+						
+						annotation config (user defined classes)@Component,@ComponentScan
+		
+						java config @Bean  (bean)
+		
+					1)configuration
+					
+					2)server tomcat
+						
+					3)dependencies(maven)
+					
+	spring boot 
+		
+				
+			1)Auto Configuration  @Bean
+		
+			2)Embeded server	tomcat
+			
+			3)starters
+		
+			4)Actuators		/health,/beans....
+		
+		EmployeeCrud spring hibernate,oracle,tomcat....
+		
+		
+	Controller->spring mvc index.jsp
+	
+	
+	webservices:application <-->application communication interoperable
+			fb-->user 
+		
+		govt <--273827	<---phonepe -->user 
+		
+		sbicard <-->icici ATM machine<-->sbi server
+		
+			EJB---->java<--->java
+		
+					soap  -->XML
+					
+					restful-->XML,JSON,........
+							webservices
+		
+		
+					app1	<----->		app2
+		
+					java<-->JAX-B				python
+		
+					object-->xml,json,html,javascript....
+		
+		JSON:javascript object notation
+		
+				{"eid":123,"ename":"suresh","esal":1223}
+		
+			jackson
+		java<------>Json
+
+@Controller
+
+
+@RestController      ---->POSTMAN
+
+
+Logging:
+=======
+
+		Logger
+		Appender		
+		Layout
+
+		Logger:  java.util.logging
+		========
+				Logger logger=Logger.getLogger(Employee.class);
+
+
+Monolithic 
+
+Microservices:
+==============
+Microservice is an architecture style which says decompose large/big application into 
+smaller services and later communicate these services together to form larger business application.
+
+	
+
+Principles of microservices: 
+
+
+	1)single microservice per single busines responsisbilty
+
+	
+	2)microservices are independently deployable
+		self contained
+		
+		
+		docker
+		
+		image ,container-->OS,sourcecode,server,database,dependencies
+		
+			fat jar 
+	
+
+
+		SOA-->WebServices
+
+
+		2 TYPES
+		
+		synchronous -->http
+		
+		Asynchronous --->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
